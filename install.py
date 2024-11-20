@@ -64,25 +64,25 @@ new_palette = {
         "brightWhite": "#FFFFFF"
     },
     "macchiato": {
-        "background": "#FFFFFF",  # White background
-        "foreground": "#FFFFFF",  # White text
-        "cursor": "#FFFFFF",      # White cursor
-        "black": "#d1f600",
-        "red": "#ff6b6b",
+        "background": "#d1f600",   # Macchiato background color
+        "foreground": "#1f2600",   # Macchiato foreground color
+        "cursor": "#4b5900",       # Macchiato cursor color
+        "black": "#c4e700",
+        "red": "#ffc9d8",
         "green": "#caed00",
         "yellow": "#ffd0aa",
         "blue": "#b7e0ff",
         "magenta": "#e0d1ff",
         "cyan": "#01fcde",
-        "white": "#627400",
-        "brightBlack": "#9eba00",
+        "white": "#4b5900",
+        "brightBlack": "#92ac00",
         "brightRed": "#ffebf0",
         "brightGreen": "#e5ff8f",
         "brightYellow": "#ffeddf",
         "brightBlue": "#e4f3ff",
         "brightMagenta": "#f3eeff",
         "brightCyan": "#c5fff2",
-        "brightWhite": "#1f2600"
+        "brightWhite": "#070a00"
     },
     "frappe": {
         "background": "#000000",  # White background
