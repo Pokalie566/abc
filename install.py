@@ -40,28 +40,72 @@ uuids = {
     "latte": "de8a9081-8352-4ce4-9519-5de655ad9361",
 }
 
+# Color palettes for each theme, with the background, foreground, and cursor as white
 new_palette = {
-    "background": "#FFFFFF",  # White background
-    "foreground": "#FFFFFF",  # White text
-    "cursor": "#FFFFFF",      # White cursor
-    "black": "#FFFFFF",
-    "red": "#FFFFFF",
-    "green": "#FFFFFF",
-    "yellow": "#FFFFFF",
-    "blue": "#FFFFFF",
-    "magenta": "#FFFFFF",
-    "cyan": "#FFFFFF",
-    "white": "#FFFFFF",       # White for the default color
-    "brightBlack": "#FFFFFF",
-    "brightRed": "#FFFFFF",
-    "brightGreen": "#FFFFFF",
-    "brightYellow": "#FFFFFF",
-    "brightBlue": "#FFFFFF",
-    "brightMagenta": "#FFFFFF",
-    "brightCyan": "#FFFFFF",
-    "brightWhite": "#FFFFFF"
+    "mocha": {
+        "background": "#FFFFFF",  # White background
+        "foreground": "#FFFFFF",  # White text
+        "cursor": "#FFFFFF",      # White cursor
+        "black": "#FFFFFF",
+        "red": "#FFFFFF",
+        "green": "#FFFFFF",
+        "yellow": "#FFFFFF",
+        "blue": "#FFFFFF",
+        "magenta": "#FFFFFF",
+        "cyan": "#FFFFFF",
+        "white": "#FFFFFF",
+        "brightBlack": "#FFFFFF",
+        "brightRed": "#FFFFFF",
+        "brightGreen": "#FFFFFF",
+        "brightYellow": "#FFFFFF",
+        "brightBlue": "#FFFFFF",
+        "brightMagenta": "#FFFFFF",
+        "brightCyan": "#FFFFFF",
+        "brightWhite": "#FFFFFF"
+    },
+    "macchiato": {
+        "background": "#FFFFFF",  # White background
+        "foreground": "#FFFFFF",  # White text
+        "cursor": "#FFFFFF",      # White cursor
+        "black": "#d1f600",
+        "red": "#ff6b6b",
+        "green": "#caed00",
+        "yellow": "#ffd0aa",
+        "blue": "#b7e0ff",
+        "magenta": "#e0d1ff",
+        "cyan": "#01fcde",
+        "white": "#627400",
+        "brightBlack": "#9eba00",
+        "brightRed": "#ffebf0",
+        "brightGreen": "#e5ff8f",
+        "brightYellow": "#ffeddf",
+        "brightBlue": "#e4f3ff",
+        "brightMagenta": "#f3eeff",
+        "brightCyan": "#c5fff2",
+        "brightWhite": "#1f2600"
+    },
+    "frappe": {
+        "background": "#000000",  # White background
+        "foreground": "#000000",  # White text
+        "cursor": "#000000",      # White cursor
+        "black": "#000000",
+        "red": "#000000",
+        "green": "#000000",
+        "yellow": "#000000",
+        "blue": "#000000",
+        "magenta": "#000000",
+        "cyan": "#000000",
+        "white": "#000000",
+        "brightBlack": "#000000",
+        "brightRed": "#000000",
+        "brightGreen": "#000000",
+        "brightYellow": "#000000",
+        "brightBlue": "#000000",
+        "brightMagenta": "#000000",
+        "brightCyan": "#000000",
+        "brightWhite": "#000000"
+    }
 }
-
 
 def gsettings_get(key: str):
     return json.loads(
@@ -98,13 +142,13 @@ except CalledProcessError:
     profiles = []
 
 # Iterate over each flavor and apply the new colors
-for flavor, color_obj in palette.items():
+for flavor, color_obj in new_palette.items():
     uuid = uuids.get(flavor)
     
     if not uuid:
         continue
     
-    colors = new_palette  # Use the new color palette
+    colors = color_obj  # Use the color palette for each theme
     
     # Update settings with the new colors
     gsettings_set("visible-name", f"Rootloops {flavor.capitalize()}", uuid)
@@ -131,4 +175,3 @@ for flavor, color_obj in palette.items():
 
 gsettings_set("list", profiles)
 print("All profiles installed.")
-
