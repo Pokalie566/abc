@@ -40,28 +40,28 @@ uuids = {
     "latte": "de8a9081-8352-4ce4-9519-5de655ad9361",
 }
 
-# New palette color definitions
 new_palette = {
-    "background": "#e5ff8f",
-    "foreground": "#354000",
-    "cursor": "#627400",
-    "black": "#d1f600",
-    "red": "#ffc9d8",
-    "green": "#caed00",
-    "yellow": "#ffd0aa",
-    "blue": "#b7e0ff",
-    "magenta": "#e0d1ff",
-    "cyan": "#01fcde",
-    "white": "#627400",
-    "brightBlack": "#9eba00",
-    "brightRed": "#ffebf0",
-    "brightGreen": "#e5ff8f",
-    "brightYellow": "#ffeddf",
-    "brightBlue": "#e4f3ff",
-    "brightMagenta": "#f3eeff",
-    "brightCyan": "#c5fff2",
-    "brightWhite": "#1f2600"
+    "background": "#FFFFFF",  # White background
+    "foreground": "#FFFFFF",  # White text
+    "cursor": "#FFFFFF",      # White cursor
+    "black": "#FFFFFF",
+    "red": "#FFFFFF",
+    "green": "#FFFFFF",
+    "yellow": "#FFFFFF",
+    "blue": "#FFFFFF",
+    "magenta": "#FFFFFF",
+    "cyan": "#FFFFFF",
+    "white": "#FFFFFF",       # White for the default color
+    "brightBlack": "#FFFFFF",
+    "brightRed": "#FFFFFF",
+    "brightGreen": "#FFFFFF",
+    "brightYellow": "#FFFFFF",
+    "brightBlue": "#FFFFFF",
+    "brightMagenta": "#FFFFFF",
+    "brightCyan": "#FFFFFF",
+    "brightWhite": "#FFFFFF"
 }
+
 
 def gsettings_get(key: str):
     return json.loads(
